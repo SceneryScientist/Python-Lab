@@ -1,0 +1,10 @@
+l = eval(input(‘Enter a list: ‘)) 
+i = 1 
+lnew = [] 
+while i<=len(l): 
+  x = l[i-1] 
+  y = l[i:i+1] 
+  lnew += y 
+  lnew += [x] 
+  i += 2 
+print(‘New list: ‘, lnew) 
