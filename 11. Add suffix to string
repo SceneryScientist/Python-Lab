@@ -1,0 +1,9 @@
+s = input(“Enter a string: “) 
+l = len(s) 
+ 
+if l> =3 and s[l-3:]==’ing’ 
+  s +='ly' 
+elif >=3: 
+  s += 'ing' 
+ 
+print ("New string is", s) 
