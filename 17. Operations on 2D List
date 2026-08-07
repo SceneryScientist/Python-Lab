@@ -1,0 +1,59 @@
+r = int(input(‘Enter number of rows: ‘)) 
+c = int(input(‘Enter number of columns: ‘)) 
+matrix =[] 
+while True: 
+menu = int(input(‘ 1. Create a 2D list\n 2. Display matrices\n 3. Add matrices\n 4. Add row elements\n 5. Transpose\n 6. Exit\n Enter: ‘)) 
+ 
+  if menu==1: 
+    temp = [] 
+    for i in range(r): 
+      temp2 = [] 
+      for j in range(c): 
+        print (‘Enter element’, j+1 ,’of row’, i+1 ,end= ‘‘) 
+        a = int(input(‘: ‘)) 
+        temp2.append(a) 
+       temp.append(temp2) 
+    matrix.append(temp) 
+   
+  elif menu==2: 
+    for i in range(len(matrix)): 
+      print(i+1) 
+      for j in matrix[i]: 
+        print(j) 
+
+  elif menu==3: 
+    e = eval(input(‘Enter the matrices to add: ‘)) 
+    l1,l2 = matrix[e[0]-1],matrix[e[1]-1] 
+    smat=[] 
+    for i in range(r): 
+      stemp=[] 
+      for j in range(c): 
+        stemp.append(l1[i][j]+l2[i][j]) 
+        print(stemp) 
+   
+  elif menu==4: 
+    n = int(input(‘Enter matrix: ‘)) 
+    l = matrix[n-1] 
+    for i in range(r): 
+      srow=0 
+      for j in range(c): 
+        srow += l[i][j] 
+        print (‘Sum of row: ‘, srow) 
+       
+  elif menu==5: 
+    n = int(input(‘Enter matrix: ‘)) 
+    a = matrix[n-1] 
+    t= [] 
+    for i in range(c): 
+      t.append([0]*r) 
+    for i in range(c): 
+      for j in range(r): 
+        t[i][j]=a[j][i] 
+       for j in t: 
+        print(j) 
+     
+  elif menu==6: 
+    break 
+   
+  else: 
+    print(‘Invalid value.’) 
