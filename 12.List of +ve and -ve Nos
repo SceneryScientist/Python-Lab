@@ -1,0 +1,10 @@
+l = eval(input(‘Enter a list of integers: ‘)) 
+pl,nl = [],[] 
+ 
+for i in l: 
+  if i>0: 
+    pl += [i] 
+  elif i<0: 
+    nl += [i] 
+ 
+print (‘Original list:’, l ,’\nList of positive numbers:’, pl ,’\nList of negative numbers:’, nl) 
