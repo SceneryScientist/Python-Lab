@@ -1,0 +1,16 @@
+marks = float(input(‘Enter the marks received: ‘)) 
+total = int(input(‘Enter the maximum marks: ‘)) 
+percent = (int(marks)*100)/total 
+ 
+if percent>90: 
+print (‘A grade’) 
+elif percent>80 and percent<=90: 
+print (‘B grade’) 
+elif percent>70 and percent<=80: 
+print (‘C grade’) 
+elif percent>60 and percent<=70: 
+print (‘D grade’) 
+elif percent>=60: 
+print (‘E grade’) 
+else : 
+print (‘Invalid entry’)
