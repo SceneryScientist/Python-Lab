@@ -1,0 +1,44 @@
+import json 
+dict={} 
+ 
+while True: 
+  print() 
+  menu = int(input(‘ 1. Create dictionary\n 2. Display dictionary\n 3. Add new entry\n 4.Delete entry\n 
+          5. Check for a name\n 6. Display in sorted order\n 7. Exit\n Enter: ‘)) 
+   
+  if menu==1: 
+    n = int(input(‘Enter number of entries: ‘)) 
+    for i in range(n): 
+      name = input(‘Enter name: ‘) 
+      phone = input(‘Enter phone number: ‘) 
+      dict[name] = phone 
+     
+  elif menu==2: 
+    print (json.dumps(dict, indent=2)) 
+    name = input(‘Enter name: ‘) 
+
+  elif menu==3: 
+    phone = input(‘Enter phone number: ‘) 
+    dict[name] = phone 
+     
+  elif menu==4: 
+    named = input(‘Enter name to delete: ‘) 
+    if named in dict: 
+      del dict[named] 
+     
+  elif menu==5: 
+    names = input(‘Enter name to find: ‘) 
+    if names in dict: 
+      print (names ,’is in the dictionary’) 
+    else: 
+      print (names ,’is not in the dictionary’) 
+     
+  elif menu==6: 
+    lsort = sorted(dict.items()) 
+    print (‘Sorted dictionary:’, json.dumps(dict, indent=2)) 
+     
+  elif menu==7: 
+    break 
+   
+  else: 
+    print (‘Invalid entry.’) 
