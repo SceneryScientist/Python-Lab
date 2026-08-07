@@ -1,0 +1,22 @@
+s = input(‘Enter a sentence: ‘) 
+vowels=0 
+consonants=0 
+uppercase=0 
+lowercase=0 
+ 
+vowelall = ‘aeiou’ 
+ 
+for ch in (s): 
+  if ch.isupper()==True: 
+    uppercase += 1 
+  elif ch.islower()==True: 
+    lowercase += 1 
+  if ch in vowelall: 
+    vowels += 1 
+  elif ord(ch) in range(65,91) or ord(ch) in range(97,123) and ch not in vowelall: 
+    consonants += 1 
+ 
+print (‘Number of Vowels: ‘, vowels) 
+print (‘Number of Consonants: ‘, consonants) 
+print (‘Number of Uppercase: ‘, uppercase) 
+print (‘Number of Lowercase: ‘, lowercase) 
