@@ -1,0 +1,35 @@
+s = input(‘Enter a string with only single spaces between words: ‘) 
+while True: 
+  print() 
+  menu = int(input(‘ 1. Read a string\n 2. Capitalize each word\n 3. Count words\n 4. Reverse adjacent characters\n 5. Exit\n Enter: ‘)) 
+
+  if menu==1: 
+    s = input(‘Enter a string: ‘) 
+    print(‘Entered string: ‘ , s) 
+ 
+  elif menu==2: 
+    s_title = s.title() 
+    print(s_title) 
+     
+  elif menu==3: 
+    count = 0 
+    for ch in (s): 
+    if ch==‘ ‘: 
+    count = count+1 
+    print (‘Number of words: ‘,count+1) 
+
+  elif menu==4: 
+    snew = ‘‘ 
+    i=0 
+    while i<len(s): 
+    x = s[i:i+1] 
+    y = s[i+1:i+2] 
+    snew += y+x 
+    i+=2 
+    print (snew) 
+   
+  elif menu==5: 
+    break 
+  else: 
+    print (‘Invalid entry.’) 
+
