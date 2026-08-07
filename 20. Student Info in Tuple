@@ -1,0 +1,39 @@
+n = int(input(‘Enter number of students: ‘)) 
+tfinal = () 
+detail = [‘roll’, ‘name’, ‘mark 1’, ‘mark 2’, ‘mark 3’] 
+for i in range(1,n+1): 
+  print() 
+  t = () 
+  for j in range(5): 
+    print (‘Enter’, detail[j] ,’of student’, i) 
+    e = eval(input(‘ ‘)) 
+    t += (e,) 
+  tfinal += (t,) 
+ 
+temp = () 
+for i in tfinal: 
+  x = i 
+  roll,name,m1,m2,m3 = x 
+  avg = (m1+m2+m3)/3 
+  x = avg,roll,name,m1,m2,m3 
+  temp += (x,) 
+ 
+  l = sorted(temp) 
+  for j in range(len(l)): 
+    x = l[j] 
+    avg,roll,name,m1,m2,m3 = x 
+    x = roll,name,m1,m2,m3,(j+1) 
+    l[j] = x 
+ 
+l = sorted(l) 
+tfinal = tuple(l) 
+detail += [‘rank’] 
+ 
+for i in detail: 
+  print(i, end=‘ ‘) 
+  print() 
+for i in tfinal: 
+  for j in i: 
+    print(j, end=‘ ‘) 
+    print() 
+
