@@ -1,0 +1,9 @@
+ph = input(‘Enter the phone number in appropriate format:’) 
+ 
+if len(ph)==12: 
+  if (ph[0:3] and ph[4:8] and ph[9:12]).isdigit() and ph[3]==‘-’ and ph[8]==‘-’: 
+    print (‘The entered phone number is valid.’) 
+  else: 
+    print (‘Invalid format. (XXX-XXXX-XXX)’) 
+else: 
+print (‘Incorrect length. (XXX-XXXX-XXX)’) 
