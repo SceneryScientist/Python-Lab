@@ -1,0 +1,43 @@
+s = input(‘Enter a sentence: ‘) 
+n = ‘‘ 
+ 
+for ch in (s): 
+  if ch.isupper() == True: 
+    t = ch.lower() 
+  elif ch.islower() == True: 
+    t = ch.upper() 
+  else: 
+    t = ch 
+    n = n+t 
+    print(n) 
+   
+first = 0 
+last = len(s)-1 
+flag = False 
+lower = ‘‘ 
+ 
+for ch in (s): 
+  if ch.isupper()==True: 
+    t = ch.lower() 
+  else: 
+    t = ch 
+    lower = lower+t 
+    while first < last: 
+  if (lower[first] >= ‘a’ and lower[first] <= ‘z’) != True: 
+    first = first+1 
+  elif (lower[last] >= ‘a’ and lower[last] <= ‘z’) != True: 
+    last = last-1 
+ 
+  elif lower[first] == lower[last]: 
+    first = first+1 
+    last = last-1 
+  else: 
+    flag = False 
+    break 
+    flag = True 
+ 
+if flag == True: 
+  print (‘The sentence is a palindrome.’) 
+else: 
+  print (‘The sentence is not a palindrome.’) 
+  
