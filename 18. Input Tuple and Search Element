@@ -1,0 +1,11 @@
+t = eval(input(‘Enter a tuple: ‘)) 
+a = eval(input(‘Enter the element to search for: ‘)) 
+l = [] 
+for i in range(len(t)): 
+  if a==(t[i],): 
+    l += [i] 
+    print(l) 
+if len(l)==0: 
+  print(a ,’does not occur in this tuple.’) 
+else: 
+  print (a ,’occurs at indexes’, l) 
