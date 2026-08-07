@@ -1,0 +1,30 @@
+l = eval(input(‘Enter a list: ‘)) 
+ 
+while True: 
+  print() 
+  menu = int(input(‘ 1. Add a record\n 2. View record\n 3. Delete Record\n 4. Modify record\n 5. Exit\n Enter: ‘)) 
+   
+  if menu==1: 
+    a = eval(input(‘Enter element to add: ‘)) 
+    l.append(a) 
+   
+  elif menu==2: 
+    print(l) 
+   
+  elif menu==3: 
+    a = eval(input(‘Enter element to delete: ‘)) 
+    l.remove(a) 
+
+  elif menu==4: 
+    a = eval(input(‘Enter element to change: ‘)) 
+    b = eval(input(‘Enter element to be changed with: ‘)) 
+    index = l.index(a) 
+    l[index] = b 
+   
+  elif menu==5: 
+    break 
+   
+  else: 
+    print (‘Invalid entry.’) 
+ 
+
