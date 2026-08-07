@@ -1,0 +1,39 @@
+import json 
+while True: 
+  dict={} 
+  print() 
+  menu = int(input(‘ 1. Count words in a sentence\n 2. Count letters in a word\n 3. Exit\n Enter: ‘)) 
+   
+  if menu==1: 
+    sentence = input(‘Enter a sentence with spaces between words and punctuations: ‘) 
+    sentence = sentence.lower() 
+    words = sentence.split() 
+     
+    for i in words: 
+      key = i 
+      if key not in dict: 
+        count = words.count(key) 
+        dict[key] = count 
+  
+    print (json.dumps(dict, indent=2)) 
+
+  elif menu==2: 
+    {‘a’: 4, ‘p’: 1, ‘r’: 1, ‘j’: 1, ‘i’: 1, ‘t’: 1 } 
+    word = input(‘Enter a word: ‘) 
+    word = word.lower() 
+    for i in word: 
+      key = i 
+      if key not in dict: 
+        dict[key] = 1 
+      else: 
+        dict[key] += 1 
+
+    print (json.dumps(dict, indent=2)) 
+
+  elif menu==3: 
+    break 
+   
+  else: 
+    print (‘Invalid entry.’) 
+     
+   
