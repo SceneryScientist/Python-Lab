@@ -1,0 +1,39 @@
+while True: 
+  print() 
+  menu = int(input(‘ 1. Create Fibonacci series\n 2. Find value of an index\n 3. Give 
+  index 
+  of a value\n 4. Exit\n Enter: ‘)) 
+   
+  if menu==1: 
+    x = int(input(‘Enter limit: ‘)) 
+    n1,n2 = 0,1 
+    t = () 
+    if x==1: 
+      t += n1 
+    else: 
+      t += n1,n2 
+      for ch in range (0, x-2): 
+        n3 = n1+n2 
+        t += (n3,) 
+        n1 = n2 
+        n2 = n3 
+    print(t) 
+
+  elif menu==2: 
+    i = int(input(‘Enter index: ‘)) 
+    value = t[i] 
+    print (‘Value at index’, i ,’is:’, value) 
+    value = t[i] 
+    print (‘Value at index’, i ,’is:’, value) 
+     
+  elif menu==3: 
+    v = int(input(‘Enter value: ‘)) 
+    index = t.index(v) 
+    print (‘Index of’, v ,’is:’, index) 
+   
+  elif menu==4: 
+    break 
+   
+  else: 
+    print (‘Invalid entry.’) 
+  
