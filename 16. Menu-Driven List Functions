@@ -1,0 +1,33 @@
+l = eval(input(‘Enter a list: ‘)) 
+while True: 
+  print() 
+  menu = int(input(‘ 1. Input list\n 2. Maximum element\n 3. Minimum element\n 4. Exit\n Enter: ‘)) 
+   
+  if menu==1: 
+    l = eval(input(‘Enter a list: ‘)) 
+    print(l) 
+   
+  elif menu==2: 
+  m = max(l) 
+  lm = [] 
+  for i in range(len(l)): 
+    if l[i]==m: 
+      lm += [i] 
+      length = l.count(m) 
+       
+      print (‘The maximum element is’, m ,’which occurs’, length ,’times at indexes’, lm) 
+    
+  elif menu==3: 
+    m = min(l) 
+    lm = [] 
+    for i in range(len(l)): 
+      if l[i]==m: 
+        lm += [i] 
+        length = l.count(m) 
+        print (‘The minimum element is’, m ,’which occurs’, length ,’times at indexes’, lm) 
+   
+  elif menu==4: 
+    break 
+   
+  else: 
+    print (‘Invalid entry.’) 
