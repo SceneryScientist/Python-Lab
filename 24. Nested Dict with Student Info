@@ -1,0 +1,33 @@
+import json 
+dict1={} 
+ 
+n = int(input(‘Enter number of students: ‘)) 
+mark = int(input(‘Enter maximum marks for each test: ‘)) 
+ 
+for i in range(n): 
+  r = input(‘Enter roll no: ‘) 
+  name, m1, m2, m3 = eval(input(‘Enter Name , Marks1 , Marks2 , Marks3:’)) 
+  dict1[r] = {‘name’:name, ‘m1’:m1, ‘m2’:m2, ‘m3’:m3} 
+ 
+print(‘Created Dictionary’) 
+print (dict1) 
+
+for key in dict1: 
+  total = int(dict1[key][‘m1’]) + int(dict1[key][‘m2’]) + int(dict1[key][‘m3’]) 
+  percent = (total*100)/(mark*3) 
+  grade = ‘‘ 
+  if percent>90: 
+    grade = ‘A’ 
+  elif percent>80 and percent<=90: 
+    grade = ‘B’ 
+  elif percent>70 and percent<=80: 
+    grade = ‘C’ 
+  elif percent>60 and percent<=70: 
+    grade = ‘D’ 
+  elif percent>=60: 
+    grade = ‘E’ 
+  else : 
+    grade = ‘invalid’ 
+ 
+dict2 = {‘Roll no’:key ,’Name’:dict1[key][‘name’] ,’Total Marks’:total ,’Grade’:grade} 
+print (json.dumps(dict2, indent=2)) 
