@@ -1,0 +1,39 @@
+import json 
+d = {} 
+while True: 
+  menu = int(input(‘ 1. Create dictionary\n 2. Maximum value\n 3. Remove duplicate values\n 
+          4. Sort based on key values\n 5. Exit\n Enter: ‘)) 
+   
+  if menu==1: 
+    n = int(input(‘Enter number of students: ‘)) 
+    for i in range(n): 
+      roll = input(‘Enter roll no.: ‘) 
+      mark = input(‘Enter total marks: ‘) 
+      d[roll] = mark 
+    print (json.dumps(d, indent=2)) 
+   
+  elif menu==2: 
+    mvalue = max(d.values()) 
+    for i in d: 
+      if d[i]==mvalue: 
+        break 
+    print (‘Maximum value:’, {i:mvalue}) 
+
+  elif menu==3: 
+    dnew = {} 
+    for i in d: 
+      key = i 
+      if d[i] not in dnew.values(): 
+        dnew[i] = d[i] 
+     
+    print (json.dumps(dnew, indent=2)) 
+     
+  elif menu==4: 
+    lsort = sorted(d.items()) 
+    print (‘Sorted dictionary:’, json.dumps(d, indent=2)) 
+   
+  elif menu==5: 
+    break 
+   
+  else: 
+    print (‘Invalid entry.’) 
